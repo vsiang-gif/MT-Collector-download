@@ -1,0 +1,2 @@
+e8259d6ff341b9e7a6276b8baca3e348  MT-Collector-1.4.0-portable.exe
+03e017f974d09da10dd1cf21912f9f93  MT-Collector-1.4.0-setup.exe
