@@ -13,11 +13,11 @@ jobs:
       - name: Join parts
         run: |
           mkdir out
-          for f in setup portable; do cat parts/MT-Collector-1.4.0-$f.exe.part* > out/MT-Collector-1.4.0-$f.exe; done
+          for f in setup portable; do cat parts/MT-Collector-1.4.1-$f.exe.part* > out/MT-Collector-1.4.1-$f.exe; done
           cd out && md5sum -c ../parts/md5.txt
       - name: Publish release
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release delete v1.4.0 -y --cleanup-tag || true
-          gh release create v1.4.0 --title "MT-Collector 1.4.0" --notes "MT-Collector 1.4.0 Windows 安装版 / 免安装版" --latest out/*.exe
+          gh release delete v1.4.1 -y --cleanup-tag || true
+          gh release create v1.4.1 --title "MT-Collector 1.4.1" --notes "MT-Collector 1.4.1 Windows 安装版 / 免安装版" --latest out/*.exe
